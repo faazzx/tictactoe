@@ -29,7 +29,7 @@ const Board = () => {
         for(let logic of winnerlogic){
             const [a,b,c]=logic;
             if( state[a] != null && state[a]===state[b] && state[b]=== state[c]){
-                return true;
+                return state[a];
             }
             
         }
@@ -43,7 +43,7 @@ const Board = () => {
         <div className="board-container">
            
 
-            {iswinner ? (<>Someone won </> ) :(
+            {iswinner ? (<>{iswinner} is the winner </> ) :(
             <>
 
             <div className="board-row">
